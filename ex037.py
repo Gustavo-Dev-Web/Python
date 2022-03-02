@@ -1,17 +1,16 @@
-from dataclasses import replace
-número = int(input('Digite o número 1 pra converter pra binário o 2 pra converter pra hexadecimal e o 3 pra octal:'))
+print('''O [1] converte pra binário
+O [2] converte pra hexadecimal
+O [3] converte pra octal''')
+
+número = int(input('Digite aqui:'))
+
+num = int(input('Coloque aqui seu número:'))
 
 if número == 1:
-    binário = int(input('Coloque aqui seu número:'))
-    print('Seu número convertido para binário fica:')
-    print(format(binário,'b'))
+    print(f'O número {num} convertido para binário fica: {bin(num)[2:]}')
 elif número == 2:
-    hexadecimal = int(input('Coloque aqui seu número:'))
-    print(f'Seu número convertido para hexadecimal fica:')
-    hexa = hex(hexadecimal)
-    replace_hexa = hexa.replace('0x','')
-    print(replace_hexa) 
+    print(f'O número {num} convertido para hexadecimal fica: {hex(num)[2:]}') 
 elif número == 3:
-    octal = int(input('Coloque aqui seu número:'))
-    print(f'Seu número convertido pra octal fica:')
-    print(format(octal,'o'))
+    print(f'Seu número convertido fica:{oct(num)[2:]}')
+else:
+    print(f'Seu número é inválido, pressione [1], [2] ou [3] e tente novamente')

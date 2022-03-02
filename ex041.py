@@ -6,9 +6,9 @@ idade = ano_atual - ano_de_nascimento
 
 if idade <= 9:
     print('Mirim!')
-elif idade <= 14 and idade > 9:
+elif idade <= 14:
     print('Infantil!')
-elif idade <= 19 and idade > 14:
+elif idade <= 19:
     print('Júnior!')        
 elif idade == 20:
     print('Sênior!')
