@@ -6,32 +6,34 @@ print('-=-'*20)
 print('Vamos jogar pedra,papel,tesoura?')
 print('-=-'*20)
 
-jokenpo = str(input('Digite pedra,papel ou tesoura:')).strip().lower()
+print('''[1] pra pedra
+[2] pra papel
+[3] pra tesoura:''')
+
+jogador = int(input('Coloque aqui sua escolha:'))
 
 lista = ['pedra','papel','tesoura']
+itens = ('pedra','papel','tesoura')
 computador = choice(lista)
 
-if jokenpo == computador:
-    print('Empate')
 
+if jogador == 1 and computador == 'tesoura':
+    print('Você ganhou!Você colocou pedra e eu coloquei tesoura')
+elif jogador == 1 and computador == 'papel':
+    print('Eu ganhei!Muahahaha!Você colocou pedra e eu coloquei papel')
 
-elif computador == 'pedra' and jokenpo == 'tesoura':
-    print(f'Eu ganhei!Muahahaha!Você colocou {jokenpo} e eu coloquei {computador}')
-elif computador == 'pedra' and jokenpo == 'papel':
-    print(f'Você ganhou!Você colocou {jokenpo} e eu coloquei {computador}')
+elif jogador == 2 and computador == 'tesoura':
+    print(f'Eu ganhei!Muahahaha!Você colocou papel e eu coloquei tesoura')
+elif jogador == 2 and computador == 'pedra':
+    print(f'Você ganhou!Você colocou papel e eu coloquei pedra')
 
+elif jogador == 3 and computador == 'pedra':
+    print(f'Eu ganhei!Muahahaha!Você colocou tesoura e eu coloquei pedra')
+elif jogador == 3 and computador == 'papel':
+    print(f'Você ganhou!Você colocou tesoura e eu coloquei papel')
 
-elif computador == 'papel' and jokenpo == 'pedra':
-    print(f'Eu ganhei!Muahahaha!Você colocou {jokenpo} e eu coloquei {computador}')
-elif computador == 'papel' and jokenpo == 'tesoura':
-    print(f'Você ganhou!Você colocou {jokenpo} e eu coloquei {computador}')
+elif jogador != 1 and jogador != 2 and jogador != 3:
+    print('Escolha uma opção válida!')
 
-
-elif computador == 'tesoura' and jokenpo == 'papel':
-    print(f'Eu ganhei!Muahahaha!Você colocou {jokenpo} e eu coloquei {computador}')
-elif computador == 'tesoura' and jokenpo == 'pedra':
-    print(f'Você ganhou!Você colocou {jokenpo} e eu coloquei {computador}')
-
-    
 else:
-    print('Escolha pedra,papel ou tesoura')    
+    print('Empate!')    
