@@ -1,5 +1,6 @@
 a1 = int(input('Primeiro termo da PA:'))
 r = int(input('Razão da PA:'))
-
-for c in range(a1, 11, r):
-    print(c)
+an = a1 + (9*r)
+for c in range(a1, an, r):
+    print(c, end=' → ')
+print('Acabou')    
