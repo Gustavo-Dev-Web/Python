@@ -1,17 +1,17 @@
 from datetime import date
 
 AnoAtual = date.today().year
-totmenor = 0
-totmaior = 0
+contmenor = 0
+contmaior = 0
 
 for pessoa in range(1, 8):
     AnoDeNascimento = int(input(f'Em que ano {pessoa}ª nasceu? '))
     idade = AnoAtual-AnoDeNascimento
 
-    if idade <= 21:
-        totmenor += 1
+    if idade < 21:
+        contmenor += 1
     else:
-        totmaior +=1    
-print(f'Ao todo tivemos {totmaior} pessoas maiores de idade')
-print(f'Ao todo tivemos {totmenor} pessoas menores de idade')        
+        contmaior +=1    
+print(f'Ao todo tivemos {contmaior} pessoas maiores de idade')
+print(f'Ao todo tivemos {contmenor} pessoas menores de idade')        
 

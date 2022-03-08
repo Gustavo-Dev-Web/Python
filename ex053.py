@@ -1,9 +1,10 @@
-frase = str(input('Digite uma frase aqui e descubra se ela é um políndromo: ')).capitalize()
+frase = str(input('Digite uma frase aqui e descubra se ela é um palíndromo: ')).upper()
 
 substituir = frase.replace(' ','')
-reverso =''.join(reversed(substituir)).title()
 
-print(f'A frase {frase} ao contrário é {reverso}')
+juntando=''.join(substituir)
+reverso = juntando[::-1]
+print(f'A frase {substituir} ao contrário é {reverso}')
 
 if substituir == reverso:
     print('A frase é um palíndromo')
