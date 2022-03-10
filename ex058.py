@@ -1,13 +1,11 @@
 from random import randint
-
-contador = 0
-a = 0
-numero = 1
-
-while numero != a:
-    a = randint(1,10)
-    numero = int(input('Escolha um número:'))
-    if numero != a:
-        contador += 1
-    elif numero == a:
-        print(f'Parabéns após {contador+1} chances nós dois pensamos no número {a}')   
+contador = 1
+computador = randint(1,10)
+jogador = int(input('Escolha um número:(De 1 até 10):'))
+while jogador != computador:
+    contador += 1            
+    if computador < jogador:
+        jogador = int(input('É MENOS... Escolha outro número:'))
+    if computador > jogador:
+        jogador = int(input('É MAIS... Escolha outro número:'))
+print(f'Parabéns,após {contador} tentativas você acertou')                           
