@@ -1,15 +1,17 @@
-from random import randint
-while True:
-    comp = randint(1,10)
-    n = int(input('Escolha seu número:'))
-    opção = str(input('Par ou ímpar:[P/I] ')).strip().lower()[0]
-    if n + comp % 2 == 0:
-        if opção in 'Pp':
-            print(f'Você ganhou! eu coloquei {comp} e você colocou {n}')
-        elif opção in 'Ii':
-            print(f'Você perdeu! eu coloquei {comp} e você colocou {n}')   
-    elif n + comp % 2 > 0:
-        if opção in 'Ii':
-            print(f'Você ganhou! eu coloquei {comp} e você colocou {n}')
-        elif opção in 'Pp':
-            print(f'Você perdeu! eu coloquei {comp} e você colocou {n}')    
+M = ContF = cont = 0
+escolha = 's'
+sexo = ''
+while escolha =='s':
+    idade = int(input('Idade:'))
+    sexo = str(input('Sexo:[M/F] ')).lower().strip()
+    if idade > 18:
+        cont+=1
+    if sexo in 'f':
+        if idade < 20:
+            ContF+= 1
+    if sexo in 'm':
+        M += 1  
+    escolha = str(input('Quer continuar?[S/N]:'))  
+print(f'''Tem {ContF} mulheres com menos de 20 anos
+Ao todo são {M} homens cadastrados
+Tem {cont} pessoas com mais de 18 anos''')    

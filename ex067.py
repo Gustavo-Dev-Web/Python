@@ -1,7 +1,8 @@
-n = acum = 0
 while True:
-    n = int(input('Digite um número [999 encerra]: '))
-    if n == 999:
+    print('-'*70)
+    n = int(input('A tabuada de qual número você quer? '))
+    if n < 0:
         break
-    acum += n
-print(f'A soma foi {acum}')    
+    print('-'*70)
+    for t in range(1,11):
+        print(f'{n} x {t} = {t*n}')
