@@ -1,9 +1,5 @@
 opção = ''
-maior = 0
-menor = 0
-acum = 0
-cont = 0
-num = 0
+maior = menor = acum = cont = num = 0
 
 while opção != 'n':
     num = int(input('Digite um número:'))
