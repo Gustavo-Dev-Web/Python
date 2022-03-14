@@ -1,9 +1,9 @@
 a1 = int(input('Primeiro termo de uma PA:'))
 r = int(input('Razão de uma PA:'))
-
-a10 = a1 + 9*r
-c = a1
-while(c < a10+r):
-    print(f'{c}', end='-> ')
-    c+= r
-print('acabou')    
+termo = a1
+c = 1
+while c <= 10:
+    print(f'{termo}',end='')
+    print(' -> ' if c < 10 and c > 0 else'',end='')
+    termo += r
+    c+=1

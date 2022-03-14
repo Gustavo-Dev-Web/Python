@@ -1,40 +1,34 @@
 from time import sleep
-
-escolha = 4
+escolha = 0
 maior = 0
 menor = 0
-acumulador = 0
-
-for n in range(1,3):
-    num = int(input(f'Escolha o {n}° número: '))
-    acumulador += num
-    if n == 1:
-        maior = num
-        menor = num
-    else:
-        if num > maior:
-            maior = num
-        if num < menor:
-            menor = num 
-
-while escolha != 5:            
+n1 = int(input('Primeiro número:'))
+n2 = int(input('Segundo número:'))
+sleep(1)
+while escolha != 5:  
+    print('-=-'*20)          
     print('''[1] Somar
 [2] Multiplicar
 [3] Descubra qual é o maior
 [4] Novos Números
 [5] Sair do programa''')
-
-    escolha = int(input('Qual a sua opção? '))
-
-    if escolha == 4:
-        for n in range(1,3):
-            num = int(input(f'Escolha o {n}° número: '))
-            acumulador += num
-    elif escolha == 1:
-        print(f'Sua soma é {maior + menor}')
+    sleep(1)
+    escolha = int(input('----> Qual a sua opção? '))
+    sleep(1)
+    if escolha == 1:
+        print('-=-'*20)
+        print(f'A soma entre {n1} e {n2} é {n1+n2}')
     elif escolha == 2:
-        print(f'Sua multiplicação fica {maior*menor}')    
+        print('-=-'*20)
+        print(f'Sua multiplicação fica {n1*n2}')    
     elif escolha == 3:
-        print(f'O maior numero é {maior}')   
-    else:
-        print('Escolha uma opção válida')    
+        if n1 > n2:
+            maior = n1
+        else:
+            maior = n2
+        print('-=-'*20)    
+        print(f'O maior entre {n1} e {n2} é {maior}')       
+    elif escolha == 4:
+        print('Escolha novamente seus números')
+        n1 = int(input('Primeiro número:'))
+        n2 = int(input('Segundo número:'))           

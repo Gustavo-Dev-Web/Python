@@ -1,8 +1,10 @@
-cont = 0
-
 num = int(input('Qual é o número que você quer transformar em fatorial? '))
-for s in range(num, 1, -1):
-    multiplicação = (num*s)
-    if multiplicação > 0:
-        cont += multiplicação
-print(f'o número {num}! fatorado fica:{cont}')
+c = num
+f = 1
+print(f'Calculando {num}! = ',end='')
+while c > 0:
+    print(c,end='')
+    print(' x ' if c > 1 else ' = ',end='')
+    f*=c
+    c-=1
+print(f,end='')    
