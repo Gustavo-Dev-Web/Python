@@ -17,4 +17,4 @@ while True:
             nota = 1    
         contnota = 0    
         if total == 0:
-            break    
+            break       
