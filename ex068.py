@@ -1,26 +1,27 @@
 from random import randint
 cont = 0
 while True:
+    opção = 'w'
     comp = randint(1,10)
     n = int(input('Escolha seu número:'))
-    opção = str(input('Par ou ímpar:[P/I] ')).lower().strip()
+    while opção not in 'pi':
+        opção = str(input('Par ou ímpar:[P/I] ')).lower().strip()
+    print(f'Você jogou {n} e o computador jogou {comp}')    
     tot = n + comp
-    print('-=-'*20)
     if opção == 'p':
         if tot % 2 == 0:
-            print(f'Você ganhou!', end='')
             cont += 1
+            print('Você venceu!')
         else:
-            print(f'Você perdeu!',end='')  
+            print('Você perdeu!',end='')
             break     
     elif opção == 'i':
         if tot % 2 != 0:
-            print(f'Você ganhou!',end='')
             cont += 1
+            print('Você venceu!')
         else:
-            print(f'Você perdeu!',end='') 
-            break       
-    print(f'Você colocou {n} e eu {comp}') 
-    print('-=-'*20)   
+            print('Você perdeu!',end='')
+            break  
+print('-=-'*20)
 print(f'Você ganhou {cont} vezes!')
 print('-=-'*20)
