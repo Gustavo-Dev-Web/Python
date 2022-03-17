@@ -10,4 +10,5 @@ if média < 5.0:
 if média >= 7.0:
     print('Aprovado!')
 else:
-    print('Recuperação!')        
+    print('Recuperação!')   
+         

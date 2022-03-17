@@ -14,4 +14,3 @@ for pessoa in range(1, 8):
         contmaior +=1    
 print(f'Ao todo tivemos {contmaior} pessoas maiores de idade')
 print(f'Ao todo tivemos {contmenor} pessoas menores de idade')
-

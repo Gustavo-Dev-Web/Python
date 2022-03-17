@@ -5,3 +5,4 @@ valor4 = int(input('Digite o último valor:'))
 tupla = (valor1, valor2, valor3, valor4)
 if 9 in tupla:
     print('O 9 apareceu ')
+    

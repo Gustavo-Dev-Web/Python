@@ -6,3 +6,4 @@ if a < b + c and b < a + c and c < a + b:
     print('Suas retas podem formar um triângulo!')
 else:
     print('Suas retas não podem formar um triângulo.')
+    

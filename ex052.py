@@ -12,3 +12,4 @@ if contador == 2:
     print('Por isso ele é PRIMO!')
 else:
     print('Por isso ele NÃO É PRIMO!')  
+    

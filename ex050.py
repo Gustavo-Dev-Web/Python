@@ -7,4 +7,5 @@ for c in range(1, 7):
         acumulador += num
         contador += 1
 print(f'A soma de {contador} números PARES é {acumulador}!')
+
         

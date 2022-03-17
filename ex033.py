@@ -14,6 +14,5 @@ if b < a and b < c:
 if c < a and c < b:
     menor = c
 
-
 print(f'O menor é: {menor :.0f}')
 print(f'O maior é: {maior :.0f}')

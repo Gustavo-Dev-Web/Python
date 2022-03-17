@@ -31,4 +31,5 @@ while escolha != 5:
     elif escolha == 4:
         print('Escolha novamente seus números')
         n1 = int(input('Primeiro número:'))
-        n2 = int(input('Segundo número:'))           
+        n2 = int(input('Segundo número:'))   
+                

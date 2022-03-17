@@ -7,3 +7,4 @@ while c <= 10:
     print(' -> ' if c < 10 and c > 0 else'',end='')
     termo += r
     c+=1
+    

@@ -17,3 +17,4 @@ if parcelas <= minímo:
     print('Você poderá parcelar sua casa própria!')
 elif parcelas > minímo:
     print('Infelizmente você não conseguirá financiar sua casa!')
+    

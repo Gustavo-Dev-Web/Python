@@ -6,4 +6,5 @@ if inteiro01 > inteiro02:
 elif inteiro02 > inteiro01:
     print('O 2° número é maior') 
 elif inteiro01 == inteiro02:
-    print('O 1° e o 2° são iguais')           
+    print('O 1° e o 2° são iguais')  
+             

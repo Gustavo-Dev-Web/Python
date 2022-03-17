@@ -6,3 +6,4 @@ if km <= 200:
 else:
     preço = km*0.45
     print(f'O custo será de:{preço} R$')     
+    

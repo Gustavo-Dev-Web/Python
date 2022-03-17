@@ -15,3 +15,4 @@ elif idade > 18:
     print(f'Você deveria ter se alistado em {AnoAtual - TempoDeMaioridade }')
 elif idade == 18:
     print('Você está no ano de alistamento!')    
+    
