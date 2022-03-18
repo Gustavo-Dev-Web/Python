@@ -1,8 +1,7 @@
 palavras =('amo', 'imaginar', 'nos', 'dois', 'juntos', 'pra', 'sempre', 'Gustavo', 'De', 'Moura', 'Silva',)
 cont = 0
-while True:
-    print(palavras[cont])
-    cont+= 1
-    if cont == 11:
-        break
-print('amo' in palavras)    
+for p in palavras:
+    print(f'\nNa palavra {p.upper()} temos: ',end='')
+    for letra in p.lower():
+        if letra in 'aeiou':
+            print(letra,end='')

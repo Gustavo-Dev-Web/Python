@@ -8,7 +8,7 @@ while True:
         print(f'{itens[contobjeto] :.<40}',end='')
         contobjeto+=2
     if contpreço <= 13:    
-        print(f'R$ {itens[contpreço]:.2f}')
+        print(f'R$ {itens[contpreço]:>6.2f}')
         contpreço+=2
     if contpreço == 13:
         break
