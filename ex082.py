@@ -11,13 +11,12 @@ while True:
            opção = str(input('Escolha uma opção válida...Quer continuar?[S/N]:'))       
     if opção == 'N':
         break
-print('-=-'*30) 
-print(len(lista01))
+print('-='*30)
 for c in range(0,len(lista01)):
       if lista01[c] % 2 == 0:
           lista02.append(lista01[c])
       else:
           lista03.append(lista01[c])
-print(f'A lista completa é:{lista01}') 
+print(f'A lista completa é:{lista01}')
 print(f'A lista só de pares é:{lista02}')
-print(f'A lista só de ímpares é:{lista03}')                  
+print(f'A lista só de ímpares é:{lista03}')               

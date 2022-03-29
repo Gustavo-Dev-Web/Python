@@ -9,7 +9,6 @@ while True:
            opção = str(input('Escolha uma opção válida...Quer continuar?[S/N]:'))
     if opção == 'N':
         break
-print(lista)    
 decres =sorted(lista,reverse = True) 
 print(f'Você digitou {len(lista)} números') 
 print(f'A lista em forma descrescente fica: {decres}')
