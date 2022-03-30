@@ -14,9 +14,18 @@ while True:
     cont+=1
     if opção == 'n':
         break
-cont2 = 0
-for l in range(0,len(lista_terciária)):
-    while lista_secundária[cont2][1] == max(lista_terciária):
-        print(max(lista_terciária))
-        cont2 += 1
+print('-='*40)
+cont2=0
 print(f'Existem {cont} pessoas nessa lista')
+
+for p in lista_secundária:
+    if p[1] == max(lista_terciária):
+        print(lista_secundária[cont2][0],end=' ')
+    cont2+=1    
+print(f'pesam {max(lista_terciária):.2f} KG e, portanto, são os mais pesados ')
+cont2=0
+for p in lista_secundária:
+    if p[1] == min(lista_terciária):
+        print(lista_secundária[cont2][0],end=' ')
+    cont2+=1    
+print(f'pesam {min(lista_terciária):.2f} KG e, portanto, são os mais leves ')    
