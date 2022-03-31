@@ -1,37 +1,19 @@
-cont = 0
-lista01 = []
-lista02 = []
-lista03 = []
-lista04 = []
-while True:
-    if cont <= 2:
-        lista02.append(int(input(f'Digite o valor [0, {cont}]:')))
-        cont+=1
-    if cont >= 3 and cont < 6:
-        lista03.append(int(input(f'Digite o valor [1, {cont-3}]:')))
-        cont+=1
-    if cont >= 6 and cont <= 9:
-        lista04.append(int(input(f'Digite o valor [2, {cont-6}]:'))) 
-        cont+=1
-    if cont == 9:
-        break
-lista01.append(lista02[:])
-lista01.append(lista03[:])
-lista01.append(lista04[:])
-cont = cont2 = acum = soma_terceira_coluna = 0
+lista01 = [[], [], []]
+for c in range(0, 3):
+    for l in range(0,3):
+        lista01[c].append(int(input(f'Digite um valor [{c}, {l}]')))
 print('-='*32)
-for c in range(0,9):
-    print(f'[{lista01[cont2][cont]:^4}]',end=' ')
-    acum += lista01[cont2][cont]
-    if c == 2 or c == 5 or c == 8:
-        soma_terceira_coluna += lista01[cont2][2]
-    cont+=1
-    if c == 2 or c == 5:
-        cont=0
-        print()
-        cont2+=1     
+acum = soma = 0
+for c in range(0,3):
+    for l in range(0, 3):
+        print(f'[{lista01[c][l]:^4}]  ', end = '')
+        if lista01[c][l] % 2 == 0:
+            acum+=lista01[c][l]
+    if lista01[c][2]:
+        soma += lista01[c][2]
+    print()
 print()        
 print('=-'*32)        
-print(f'A soma de todos os números é {acum}')
-print(f'A soma dos valores da 3° coluna é {soma_terceira_coluna}')
-print(f'O maior valor da 2° linha é {max(lista03)}')
+print(f'A soma de todos os números pares é {acum}')
+print(f'A soma dos valores da 3° coluna é {soma}')
+print(f'O maior valor da 2° linha é {max(lista01[1])}')
