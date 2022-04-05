@@ -1,8 +1,10 @@
 dicionário = {}
-dicionário['nome'] = str(input('Digite o nome do Aluno:'))
-dicionário['média'] = float(input('Digite a média do Aluno:'))
-if dicionário['média'] < 6:
-    print(f'O aluno {dicionário["nome"]} foi reprovado ')
+dicionário['Nome'] = str(input('Digite o nome do Aluno:'))
+dicionário['Média'] = float(input('Digite a média do Aluno:'))
+if dicionário['Média'] < 7:
+    dicionário['Situação'] = 'Reprovado'
 else:
-    print(f'O aluno {dicionário["nome"]} foi aprovado')    
+    dicionário['Situação'] = 'Aprovado'
+for k,v in dicionário.items():
+    print(f'{k}: {v}')    
     

@@ -1,6 +1,3 @@
-from dataclasses import replace
-
-
 lista = []
 listamulher = []
 listaidade = []
@@ -8,14 +5,20 @@ totidade = cont = 0
 while True:
     dadospessoais = {}
     dadospessoais['nome'] = str(input('Nome:')).strip()
-    dadospessoais['sexo'] = str(input('Sexo [M/F]:')).strip()[0].lower()
+    while True:
+        dadospessoais['sexo'] = str(input('Sexo [M/F]:')).strip()[0].upper()
+        if dadospessoais['sexo'] in 'MF':
+            break
+        dadospessoais.pop('sexo')
     dadospessoais['idade'] = int(input('Idade:'))
     totidade += dadospessoais['idade']
-    if dadospessoais['sexo'] == 'f':
+    if dadospessoais['sexo'] == 'F':
          listamulher.append(dadospessoais['nome'])
     lista.append(dadospessoais.copy())
     del dadospessoais
-    opção = str(input('Quer continuar?[S/N]: ')).strip().lower()
+    opção = ' '
+    while opção not in 'sn':
+        opção = str(input('Quer continuar?[S/N]: ')).strip().lower()
     if opção == 'n':
         for c in range(0,len(lista)):
             if lista[c]['idade'] > totidade/len(lista):
@@ -30,3 +33,4 @@ print('\n- As pessoas com idade acima da média são:')
 for v in enumerate(listaidade):
     print(v,end=' ')
     cont +=1
+    
