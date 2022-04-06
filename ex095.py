@@ -21,11 +21,16 @@ for c in range(0,len(aglomerado)):
     print(f'{c}    {aglomerado[c]["Nome"]}   {aglomerado[c]["Gols"]}    {aglomerado[c]["Total"]}')
 while True:    
     opção = int(input('Mostrar dados de qual jogador?[999 para] '))
-    while opção > len(aglomerado)-1:
-        opção = int(input(f'''Erro! Não existe jogador com código {opção}
+    if opção != 999 and opção < len(aglomerado):
+        print(f'-Levantamento do jogador {aglomerado[opção]["Nome"]}')
+        for c in range(0,len(aglomerado[opção]['Gols'])):
+            print(f'    No jogo {c+1} fez {aglomerado[opção]["Gols"][c]} gols')
+    elif opção > len(aglomerado)-1 and opção != 999:                
+        while opção > len(aglomerado)-1:
+            opção = int(input(f'''Erro! Não existe jogador com código {opção}       
 Mostrar dados que qual jogador?[999 para] '''))
-    if opção == 999:
-        break
-    print(f'-Levantamento do jogador {aglomerado[opção]["Nome"]}')
-    for c in range(0,len(aglomerado[opção]['Gols'])):
-        print(f'    No jogo {c+1} fez {aglomerado[opção]["Gols"][c]} gols')
+        print(f'-Levantamento do jogador {aglomerado[opção]["Nome"]}')
+        for c in range(0,len(aglomerado[opção]['Gols'])):
+             print(f'    No jogo {c+1} fez {aglomerado[opção]["Gols"][c]} gols')
+    else:
+        break 
